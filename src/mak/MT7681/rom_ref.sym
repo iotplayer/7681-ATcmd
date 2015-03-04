@@ -1,0 +1,39 @@
+SECTIONS
+{
+	ARC4_Compute = 0x00102d48;	 /* obj/crypt_arc4.o */
+	RT_MD5 = 0x00103e98;	 /* obj/crypt_md5.o */
+	RT_SHA1_Hash = 0x00102de0;	 /* obj/crypt_sha2.o */
+	aes_mul_e = 0x0010252c;	 /* obj/crypt_aes.o */
+	memmove = 0x001026a4;	 /* obj/string.o */
+	RT_MD5_Init = 0x00103e54;	 /* obj/crypt_md5.o */
+	aes_mul_d = 0x0010242c;	 /* obj/crypt_aes.o */
+	SHA1_K = 0x0010262c;	 /* obj/crypt_sha2.o */
+	memcpy = 0x001026f0;	 /* obj/memcpy.o */
+	RT_MD5_End = 0x00103d48;	 /* obj/crypt_md5.o */
+	SHA1_DefaultHashValue = 0x0010263c;	 /* obj/crypt_sha2.o */
+	RT_MD5_Append = 0x00103dc0;	 /* obj/crypt_md5.o */
+	RT_SHA1 = 0x001031bc;	 /* obj/crypt_sha2.o */
+	RT_AES_KeyExpansion = 0x001027a0;	 /* obj/crypt_aes.o */
+	ROMBA = 0x00102000;	 /* *ABS* */
+	ARC4_INIT = 0x00102cf0;	 /* obj/crypt_arc4.o */
+	RT_SHA1_End = 0x00102fd8;	 /* obj/crypt_sha2.o */
+	_SDA_BASE_ = 0x00102000;	 /* out/MT7681ROM.elf */
+	memcmp = 0x001026d4;	 /* obj/string.o */
+	TKIP_GTK_KEY_WRAP = 0x0010271c;	 /* obj/cmm_tkip.o */
+	memset = 0x00102708;	 /* obj/memset.o */
+	aes_sbox_enc = 0x0010202c;	 /* obj/crypt_aes.o */
+	MD5_DefaultHashValue = 0x00102650;	 /* obj/crypt_md5.o */
+	aes_mul_9 = 0x0010222c;	 /* obj/crypt_aes.o */
+	RT_SHA1_Init = 0x00103178;	 /* obj/crypt_sha2.o */
+	ROMVersion = 0x00103ffe;	 /* obj/string.o */
+	RT_AES_Decrypt = 0x001028ac;	 /* obj/crypt_aes.o */
+	aes_rcon = 0x00102000;	 /* obj/crypt_aes.o */
+	RT_SHA1_Append = 0x001030e4;	 /* obj/crypt_sha2.o */
+	aes_mul_b = 0x0010232c;	 /* obj/crypt_aes.o */
+	strspn = 0x00102660;	 /* obj/string.o */
+	TKIP_GTK_KEY_UNWRAP = 0x0010278c;	 /* obj/cmm_tkip.o */
+	ARC4_Discard_KeyLength = 0x00102da8;	 /* obj/crypt_arc4.o */
+	RT_MD5_Hash = 0x001031fc;	 /* obj/crypt_md5.o */
+	aes_sbox_dec = 0x0010212c;	 /* obj/crypt_aes.o */
+	strpbrk = 0x00102684;	 /* obj/string.o */
+}
