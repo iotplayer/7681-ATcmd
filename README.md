@@ -1,5 +1,5 @@
 # 7681-ATcmd
-This project is an extension for LinkIt Connect 7681.
+This project is an extension for LinkIt Connect 7681 (SDK v1.7.1).
 
 LinkIt Connect 7681 is an product of Mediatek Labs (http://labs.mediatek.com/site/global/developer_tools/mediatek_7681/whatis_7681/index.gsp)
 
