@@ -113,7 +113,7 @@ _tcpip_init(void)
         uip_ipaddr(ipaddr, IoTpAd.ComCfg.DNS_IP[0],IoTpAd.ComCfg.DNS_IP[1],
                    IoTpAd.ComCfg.DNS_IP[2],IoTpAd.ComCfg.DNS_IP[3]);
         resolv_conf(ipaddr);
-        resolv_query("www.baidu.com");
+        //resolv_query("www.baidu.com");
 #endif
         dhcpc_set_state(STATE_CONFIG_DONE);
     }
@@ -203,6 +203,7 @@ void tcpip_periodic_timer()
 #endif
     }
 
+#if 0
     if (timer_expired(&cli_timer)) {
         clk = (clk > (CLOCK_SECOND*60))?clk:(clk*2);
         timer_set(&cli_timer, clk);
@@ -223,6 +224,7 @@ void tcpip_periodic_timer()
             }
         }
     }
+#endif    
 }
 /*---------------------------------------------------------------------------*/
 void
@@ -240,7 +242,7 @@ dhcpc_configured(const struct dhcpc_state *s)
     uip_setdraddr(s->default_router);
 #if CFG_SUPPORT_DNS
     resolv_conf(s->dnsaddr);
-    resolv_query("www.baidu.com");
+    //resolv_query("www.baidu.com");
 #endif
 }
 #endif /* __DHCPC_H__ */

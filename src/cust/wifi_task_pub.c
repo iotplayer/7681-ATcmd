@@ -376,6 +376,10 @@ void wifi_state_machine(void)
 #endif
 #endif
 
+    {
+        extern void iot_hook_state_machine(void);
+        iot_hook_state_machine();
+    }
     return;
 }
 
@@ -398,6 +402,7 @@ int32        Vcount = 0;
 #ifdef CONFIG_STATION
 void ws_init(OUT bool *pb_enable)
 {
+    extern bool g_useFlashSetting;
     *pb_enable = TRUE;
     
 #if CFG_SUPPORT_4WAY_HS
@@ -412,12 +417,14 @@ void ws_init(OUT bool *pb_enable)
         IoTCustOp.IoTCustWifiSMInit();
     }
 
-    if ((pIoTMlme->ValidFlashStaCfg == TRUE) && (pIoTMlme->ATSetSmnt == FALSE))  {
+//    if ((pIoTMlme->ValidFlashStaCfg == TRUE) && (pIoTMlme->ATSetSmnt == FALSE))  {
+    if ((g_useFlashSetting) && (pIoTMlme->ATSetSmnt == FALSE))  {
         wifi_state_chg(WIFI_STATE_SCAN, SCAN_STA_IDLE);
     } else  {
         /*if pIoTMlme->ATSetSmnt = TRUE,  go to smart connection state*/
         ws_goto_smnt();
     }
+    g_useFlashSetting = FALSE;
 }
 
 /*========================================================================

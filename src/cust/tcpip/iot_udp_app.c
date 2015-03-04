@@ -99,6 +99,11 @@ iot_udp_appcall(void)
 #endif
     /* Customer APP end. */
 
+    {
+        extern void iot_hook_uip_appcall(u16_t lport, uip_ipaddr_t* rip, u16_t rport, bool);
+        iot_hook_uip_appcall(uip_udp_conn->lport, &uip_udp_conn->ripaddr, uip_udp_conn->rport, TRUE);
+    }
+
     return;
 }
 

@@ -30,7 +30,7 @@
 /*This APP make MT7681 as a UDP server,  it will receive UDP packet from local port7682,
    if received message "ip",  this UDP server will send its own ip address to the UDP clients who send "ip" message,
    For MTK IoTManager.APK demo , this macro need to be enabled*/
-#define UDP_SRV_APP1_ENABLE       1
+#define UDP_SRV_APP1_ENABLE       0
 
 
 #ifdef CONFIG_SOFTAP

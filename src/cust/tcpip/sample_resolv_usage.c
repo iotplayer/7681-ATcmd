@@ -1,3 +1,4 @@
+#if 0
 #include "uip.h"
 #include "sample_resolv_usage.h"
 #include "resolv.h"
@@ -52,3 +53,4 @@ void resolv_usage_sample()
     return;
 }
 
+#endif

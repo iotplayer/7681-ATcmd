@@ -181,7 +181,7 @@ typedef unsigned short uip_stats_t;
 #define UIP_CONF_RESOLV_ENTRIES 1
 
 #define UIP_HTTP_CLIENT_SUPPORT 1
-#define UIP_CLOUD_SERVER_SUPPORT 1
+#define UIP_CLOUD_SERVER_SUPPORT 0
 /* Here we include the header file for the application(s) we use in
    our project. */
 /*#include "smtp.h"*/

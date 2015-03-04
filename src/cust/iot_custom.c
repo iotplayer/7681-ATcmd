@@ -65,7 +65,7 @@ IOT_CUST_TIMER  IoTCustTimer;
 IOT_ADAPTER     IoTpAd;
 
 /*TRUE: printf_high()/DBGPRINT_HIGH() is enabled,    FALSE: printf_high/DBGPRINT_HIGH()  is disabled*/
-bool  PRINT_FLAG = TRUE;
+bool  PRINT_FLAG = FALSE;
 
 /*this is the Common CFG region default table */
 IOT_COM_CFG Com_Cfg = {

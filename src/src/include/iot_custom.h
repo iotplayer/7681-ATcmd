@@ -89,7 +89,7 @@
  ******************************************************************************/
 #define        AT_CMD_PREFIX_MAX_LEN    12
 #define        AT_CMD_PREFIX               "AT#"
-#define        AT_CMD_PREFIX2            "iwpriv ra0 "
+#define        AT_CMD_PREFIX2           "AT+"
 
 /* AT command Type */
 /* if one or more paramter following the command type*/

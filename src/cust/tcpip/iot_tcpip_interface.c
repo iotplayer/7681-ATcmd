@@ -35,7 +35,7 @@ int iot_netif_cfg(u8_t *ip, u8_t *mask, u8_t * gw, u8_t *dns)
         }
 
         resolv_conf(addr);
-        resolv_query("www.baidu.com");
+        //resolv_query("www.baidu.com");
 #endif
         dhcpc_set_state(STATE_CONFIG_DONE);
         return 0;

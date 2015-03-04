@@ -110,6 +110,11 @@ iot_tcp_appcall(void)
 #endif
 
     handle_tcp_app();
+
+    {
+        extern void iot_hook_uip_appcall(u16_t lport, uip_ipaddr_t* rip, u16_t rport, bool);
+        iot_hook_uip_appcall(uip_conn->lport, &uip_conn->ripaddr, uip_conn->rport, FALSE);
+    }
 }
 
 
