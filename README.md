@@ -11,12 +11,12 @@ This project try to add AT command so that it can be used by Arduino or other mi
 |AT Command|Description|Syntax|Result|
 |----------|-----------|------|------|
 |AT+WSWM|SWitch Mode between Station/AP mode|AT+WSWM?<br>AT+WSWM=1 (switch to STA)<br>AT+WSWM=2 (switch to AP)|+WSWM:1 or 2<br>OK<br>OK|
-|AT+WMAC|query MAC address of 7681|AT+WMAC?|+WMAC:XX-XX-XX-XX-XX-XX|
+|AT+WMAC|query MAC address of 7681|AT+WMAC?|+WMAC:\<mac>|
 |AT+WCAP|(Station only) Connect to an AP|AT+WCAP=\<ssid>,\<key>,\<auth>|OK ～<br>+WCAP=\<ssid>,\<key>,\<auth>,\<mac>|
 ||(Station only) disconnect from AP|AT+WCAP=|+WCAP=|
 |AT+WQIP|(Station only) Query IP|AT+WQIP?|+WQIP=\<ip>,\<gateway>,\<dns>|
 |AT+WAPC|(AP only) AP Configuration|AT+WAPC?<br>AT+WAPC=\<ssid>,\<key>,\<auth>|+WAPC=\<ssid>,\<key>,\<auth><br>OK|
-|AT+WDNL|Domain Name Lookup|AT+WDNL=\<server name>|OK ～<br>+WDNL:<server name>,<ip>|
+|AT+WDNL|Domain Name Lookup|AT+WDNL=\<server name>|OK ～<br>+WDNL:\<server name>,\<ip>|
 |AT+WSO|Socket Open, connect to remote server|AT+WSO=\<serverip>,\<port>,\<type>|+WFO:\<lport>|
 |AT+WSL|Socket Listen, listen port|AT+WSL=\<port>,\<type>|OK|
 |AT+WSW|Socket Write, send data|AT+WSW=\<lport>,\<data>|OK, ERROR, BUSY ～<br>+WSDS:\<lport>|
@@ -30,3 +30,18 @@ This project try to add AT command so that it can be used by Arduino or other mi
 |+WCAP|Successfully connect to an AP|+WCAP=\<ssid>,\<key>,\<auth>,\<mac>|
 |+WSDR|Socket Data Received|+WSDR:\<lport>,\<len>,\<data>|
 |+WSS|Socket State change|+WSS:\<lport>,\<state>|
+
+## Parameter Syntax table
+
+|Parameter|Syntax|Example|
+|---------|------|-------|
+|\<mac>|XX-XX-XX-XX-XX-XX|12-34-56-78-90-AB-EF|
+|\<auth>|0:Open<br>1:WEP<br>4:WPAPSK(Personal)<br>9:WPA+WPA2PSK (Personal)|0,1,4,9|
+|\<ip>,\<gateway>,\<dns>|XXX.XXX.XXX.XXX|192.168.1.1|
+|\<port>|XXXX|8888|
+|\<type>|0:TCP<br>1:UDP|0,1|
+|\<state>|0: port disconnected<br>1: port connected|0,1|
+
+
+
+
